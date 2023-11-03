@@ -1,6 +1,6 @@
-# vue3-cron
+# vue3-cron-editor
 
-A Cron expression UI component based on Vue3 and Ant Design Vue.
+cron expression editor based on vue3、ts and antd-vue.
 
 English | [简体中文](./README-zh_CN.md)
 
@@ -23,19 +23,19 @@ English | [简体中文](./README-zh_CN.md)
 ```
 
 | Field  | Required | Value range      | Allowed wildcard |
-|--------|----------|------------------|------------------|
-| Second | Yes      | 0-59             | , - * /          |
-| Minute | Yes      | 0-59             | , - * /          |
-| Hour   | Yes      | 0-23             | , - * /          |
-| Date   | Yes      | 1-31             | , - * / L W      |
-| Month  | Yes      | 1-12             | , - * /          |
-| Week   | Yes      | 0-7 or SUN-SAT   | , - * / L #      |
-| Year   | No       | currentYear-2099 | , - * /          |
+| ------ | -------- | ---------------- | ---------------- |
+| Second | Yes      | 0-59             | , - \* /         |
+| Minute | Yes      | 0-59             | , - \* /         |
+| Hour   | Yes      | 0-23             | , - \* /         |
+| Date   | Yes      | 1-31             | , - \* / L W     |
+| Month  | Yes      | 1-12             | , - \* /         |
+| Week   | Yes      | 0-7 or SUN-SAT   | , - \* / L #     |
+| Year   | No       | currentYear-2099 | , - \* /         |
 
 ## Installation
 
 ```
-npm install vue3-cron-antd --save
+npm install vue3-cron-editor --save
 ```
 
 ## Usage
@@ -44,29 +44,31 @@ npm install vue3-cron-antd --save
 
 ```typescript
 // Global import.
-import { createApp } from 'vue';
-import AntDesignVue from 'ant-design-vue';
-import 'ant-design-vue/dist/antd.css';
-import Vue3Cron from 'vue3-cron-antd';
+import { createApp } from 'vue'
+import AntDesignVue from 'ant-design-vue'
+import 'ant-design-vue/dist/antd.css'
+import Vue3Cron from 'vue3-cron-editor'
 
-import App from './App.vue';
+import App from './App.vue'
 
-const app = createApp(App);
+const app = createApp(App)
 
-app.use(AntDesignVue);
-app.use(Vue3Cron);
+app.use(AntDesignVue)
+app.use(Vue3Cron)
 
-app.mount('#app');
+app.mount('#app')
 ```
+
 or
+
 ```vue
 <script>
-import Vue3Cron from 'vue3-cron-antd';
+import Vue3Cron from 'vue3-cron-editor'
 // Single import.
 export default {
-    components: {
-        Vue3Cron,
-    },
+  components: {
+    Vue3Cron,
+  },
 }
 </script>
 ```
@@ -75,17 +77,17 @@ export default {
 
 ```vue
 <template>
-    <vue3-cron v-model="expression" :locale="locale" />
+  <vue3-cron v-model="expression" :locale="locale" />
 </template>
 
 <script>
-    export default {
-        data() {
-            return {
-                expression: '* * * * * ?',
-                locale: 'cn', // set 'cn' or 'en', default is 'cn'.
-            };
-        },
+export default {
+  data() {
+    return {
+      expression: '* * * * * ?',
+      locale: 'cn', // set 'cn' or 'en', default is 'cn'.
     }
+  },
+}
 </script>
 ```

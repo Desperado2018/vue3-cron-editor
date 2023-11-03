@@ -1,7 +1,7 @@
 {
-  "name": "vue3-cron-antd",
+  "name": "vue3-cron-editor",
   "version": "1.1.1",
-  "description": "A Cron expression UI component based on Vue3 and Ant Design Vue",
+  "description": "cron expression editor based on vue3、ts and antd-vue",
   "keywords": [
     "vue3-cron",
     "cron",
@@ -18,11 +18,11 @@
   "author": "Bratrindersteak",
   "license": "MIT",
   "type": "module",
-  "main": "dist/vue3-cron-antd.cjs",
-  "module": "dist/vue3-cron-antd.js",
+  "main": "dist/vue3-cron-editor.js",
+  "module": "dist/vue3-cron-editor.js",
   "repository": {
     "type": "git",
-    "url": "git@github.com:Bratrindersteak/vue3-cron.git"
+    "url": "git@github.com:Desperado2018/vue3-cron-editor.git"
   },
   "files": [
     "dist"
